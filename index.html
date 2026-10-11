@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Adiiiii!! 💙</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:20px 12px;
+ background:linear-gradient(145deg,#071a33,#163e68,#8bbde8);
+ font-family:Georgia,serif;color:#173858;
+ text-align:center;
+}
+.card{
+ max-width:600px;margin:20px auto;padding:25px 18px;
+ background:linear-gradient(145deg,#f5fbff,#d6eaff);
+ border:2px solid #a6c9e9;border-radius:25px;
+ box-shadow:0 10px 35px #00152d66;
+}
+h1{font-size:clamp(32px,8vw,48px);color:#204f7b}
+h2{color:#285985}
+p{line-height:1.9}
+.small{font:14px/1.8 Arial,sans-serif;color:#52718f}
+button{
+ padding:12px 20px;border:0;border-radius:25px;
+ background:#285d8d;color:white;cursor:pointer;
+ margin:8px;font-size:14px;
+}
+.hidden{display:none}
+.cake{font-size:85px;margin:15px}
+.note{
+ background:#fffdf6;padding:20px;border-radius:12px;
+ border:1px dashed #9ab9d6;text-align:left;
+}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{
+ padding:16px 8px;background:#ffffffbb;
+ border:1px solid #b4d3ed;border-radius:15px;
+}
+.tile span{display:block;font-size:30px;margin-bottom:8px}
+.result{font:14px/1.8 Arial,sans-serif;color:#285985}
+footer{color:#e1f1ff;font:11px Arial,sans-serif;margin:25px}
+</style>
+</head>
+<body><div class="card">
+<p>✦ A LITTLE BIRTHDAY SURPRISE ✦</p>
+<h1>Happy Birthday,<br>Adiiiiii!! 💙</h1>
+<p class="small">
+For my childhood friend 🦋<br>
+Some memories stay special forever.
+</p>
+<div style="font-size:35px">☁️ 🦋 🎂 🦋 ☁️</div><button onclick="openCard()">Open Your Card 💌</button>
+
+<div id="surprise" class="hidden"><hr><h2>🎂 Make A Wish!</h2>
+<div class="cake">🎂</div>
+<p class="small">Candles ko tap karke blow out karo!</p><div id="candles">
+<button onclick="blow(this)">🕯️</button>
+<button onclick="blow(this)">🕯️</button>
+<button onclick="blow(this)">🕯️</button>
+</div><p id="wish" class="result">Candles left: 3</p><hr><h2>💌 Ek Chhota Sa Letter</h2><div class="note"><p>Hey Adiiiii!! 🥹💙</p><p>
+Sabse pehle toh Happyyyy Birthdayyy!! 🎂✨
+Pata hai, bachpan ke friends wali baat hi alag hoti hai.
+Time ke saath sab busy ho jaate hain, baatein kam ho jaati hain,
+but purani memories apni jagah rehti hain.
+</p><p>
+Humare beech bhi ek time pe distance aa gaya tha,
+aur baatein band ho gayi thi. Jo kuch hua, uski wajah se
+humari friendship mein bhi change aa gaya.
+Kabhi-kabhi situations aisi ho jaati hain ki log door ho jaate hain,
+chahe unki memories wahi kyun na rahein.
+</p><p>
+Main past ko tere birthday ke din heavy nahi banana chahti.
+Bas itna kehna hai ki I still value the good memories we shared. 💙
+Bachpan ke woh moments apni jagah special hain,
+aur main unhe achhe se yaad rakhungi.
+</p><p>
+Ab hum pehle jitni baat nahi karte,
+but I genuinely hope ki tu life mein bohot aage jaaye,
+khush rahe, apne dreams complete kare aur hamesha aise hi smile karta rahe.
+Tu deserve karta hai ek achha sa year, lots of happiness
+aur bohot saare unexpected good surprises! 🦋
+</p><p>
+Stay the same funny, sweet aur slightly pagal version of yourself 😂
+Apna khayal rakhna, apne dreams chase karna
+aur life mein hamesha aage badhte rehna.
+</p><p>
+Happy Birthday once again, Adiiiii!! 🥳💙
+Aaj ka din mast enjoy karna, cake khana,
+photos lena aur ek extra wish mere naam ki bhi maang lena. 😂🎂
+</p><p style="text-align:right">
+— Your childhood friend 🫶🏻
+</p></div><hr><h2>🦋 Little Friendship Reminders</h2><div class="grid">
+<div class="tile">
+<span>🧸</span>
+<b>Old Memories</b>
+<p class="small">Some moments stay special even after time passes.</p>
+</div><div class="tile">
+<span>🌙</span>
+<b>New Beginnings</b>
+<p class="small">Hope this year opens beautiful new doors for you.</p>
+</div><div class="tile">
+<span>😂</span>
+<b>Keep Laughing</b>
+<p class="small">Life needs more silly jokes and happy moments.</p>
+</div><div class="tile">
+<span>💙</span>
+<b>Keep Shining</b>
+<p class="small">Wishing you peace, progress and happiness.</p>
+</div>
+</div><hr><h2>🎁 Pick A Mystery Envelope!</h2>
+<p class="small">Tap any envelope to unlock a surprise 👀</p><div class="grid"><div class="tile">
+<button onclick="showMessage('Aaj ke liye saari tension side mein! It is YOUR day, Adiiiii. Enjoy it properly! 💙')">
+<span>✉️</span>Envelope 1
+</button>
+</div><div class="tile">
+<button onclick="showMessage('May you find people who make life lighter, days brighter and memories worth keeping. 🦋')">
+<span>💌</span>Envelope 2
+</button>
+</div><div class="tile">
+<button onclick="showMessage('Birthday rule: extra cake, extra smiles and zero tension today! 😂🎂')">
+<span>🎁</span>Envelope 3
+</button>
+</div><div class="tile">
+<button onclick="compliment()">
+<span>✨</span>Random Compliment
+</button>
+</div></div><p id="message" class="result"></p><hr><h2>One Last Thing, Adiiiii! 💙</h2><p>
+Chahe baatein daily ho ya kabhi-kabhi,
+I hope life tere liye achhi cheezein lekar aaye.
+Thanks for being a part of my childhood memories. 🥹
+</p><p>
+Aaj ka din aur aane wala saal dono amazing ho!
+Keep smiling, keep growing and stay blessed. 🦋
+</p><div style="font-size:45px">🌙 💙 🎂</div><h2>Happy Birthday, Aditya! 🥳</h2><button onclick="location.reload()">Replay The Surprise ↻</button>
+
+</div>
+</div><footer>MADE WITH 💙 JUST FOR ADIIIII!!</footer><script>
+function openCard(){
+ document.getElementById("surprise").classList.remove("hidden");
+ document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+}
+
+let left=3;
+
+function blow(button){
+ if(button.dataset.blown)return;
+ button.dataset.blown="yes";
+ button.innerText="💨";
+ left--;
+ document.getElementById("wish").innerText=
+ left===0
+ ?"All candles blown out! Make your wish, Adiiiii! ✨"
+ :"Candles left: "+left;
+}
+
+function showMessage(text){
+ document.getElementById("message").innerText=text;
+}
+
+function compliment(){
+ const messages=[
+ "Adiiiii, may your smile stay unstoppable! 💙",
+ "Birthday boy deserves good friends, good luck and good food! 😂",
+ "Proud of you for making it through another year! ✨",
+ "Aaj toh hero wali entry banti hai, birthday boy! 😎"
+ ];
+ const random=messages[Math.floor(Math.random()*messages.length)];
+ showMessage(random);
+}
+</script></body>
+</html>
